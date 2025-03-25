@@ -34,6 +34,7 @@ function Header() {
         <CustomNavlink to="/events">Events</CustomNavlink>
 
         <CustomNavlink to="/dashboard">Dashboard</CustomNavlink>
+        <CustomNavlink to="/bgchanger">Bg-Changer</CustomNavlink>
         <button
           style={{ padding: "10px", backgroundColor: "blue" }}
           onClick={() => navigate("/login")}
