@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer style={{ backgroundColor: "lightblue", padding: "10px" ,marginTop:"10rem",width:"100%"}}>
+    <footer style={{ backgroundColor: "lightblue", padding: "10px" ,marginTop:"10rem",width:"100%",color:'grey'}}>
       <p>&copy; 2025@Enterprices of wandel</p>
       <address>south street,bala nagar,cabridge city,chicago</address>
       <div>

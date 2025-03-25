@@ -1,6 +1,22 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
+function CustomNavlink({to,end=false,children}) {
+   return( 
+    <NavLink
+        to={to}
+        end={end}
+        style={({ isActive }) => (
+            {
+                color:isActive ? 'green' :'grey'
+            }
+        )}
+    >
+      {children}
+    </NavLink>
+    )
+}
+
 function Header() {
 
     const navigate = useNavigate();
@@ -14,12 +30,10 @@ function Header() {
           marginBottom: "10rem",
         }}
       >
-        <NavLink to="/" end>
-          Home
-        </NavLink>
-        <NavLink to="/events">Events</NavLink>
+        <CustomNavlink to="/" end = {true}>Home</CustomNavlink>
+        <CustomNavlink to="/events">Events</CustomNavlink>
 
-        <NavLink to="/dashboard">Dashboard</NavLink>
+        <CustomNavlink to="/dashboard">Dashboard</CustomNavlink>
         <button
           style={{ padding: "10px", backgroundColor: "blue" }}
           onClick={() => navigate("/login")}
