@@ -10,6 +10,7 @@ import DashboardLayout from './pages/DashboardLayout'
 import DashboardProfile from './pages/DashboardProfile'
 import DashboardEvents from './pages/DashboardEvents'
 import DashboardSettings from './pages/DashboardSettings'
+import RequireAuth from './components/requireAuth'
 
 function App() {
   
@@ -21,11 +22,14 @@ function App() {
         <Route path='events/:eventId' element={<EventDetail />} />
         <Route path='login' element={<Login />} />
 
+      <Route element= {<RequireAuth />}>
         <Route path='dashboard' element={<DashboardLayout />} >
-          <Route index element={<DashboardProfile />} />
-          <Route path='events' element={<DashboardEvents />} />
-          <Route path='settings' element={<DashboardSettings />} />
-        </Route>
+            <Route index element={<DashboardProfile />} />
+            <Route path='events' element={<DashboardEvents />} />
+            <Route path='settings' element={<DashboardSettings />} />
+          </Route>
+      </Route>
+        
         
 
         <Route path='*' element = {<NotFound/>} />
