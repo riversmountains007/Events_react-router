@@ -12,6 +12,7 @@ import DashboardEvents from './pages/DashboardEvents'
 import DashboardSettings from './pages/DashboardSettings'
 import RequireAuth from './components/requireAuth'
 import BgChanger from './pages/BgChanger'
+import PasswordGenerator from './pages/PasswordGenerator'
 
 function App() {
   
@@ -32,6 +33,7 @@ function App() {
         </Route>
 
         <Route path='/bgchanger' element = {<BgChanger/>} />
+        <Route path='/passwordgenerator' element = {<PasswordGenerator/>} />
         
         
 

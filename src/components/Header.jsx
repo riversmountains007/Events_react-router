@@ -35,6 +35,8 @@ function Header() {
 
         <CustomNavlink to="/dashboard">Dashboard</CustomNavlink>
         <CustomNavlink to="/bgchanger">Bg-Changer</CustomNavlink>
+        <CustomNavlink to="/passwordgenerator">Password-Generator</CustomNavlink>
+
         <button
           style={{ padding: "10px", backgroundColor: "blue" }}
           onClick={() => navigate("/login")}
